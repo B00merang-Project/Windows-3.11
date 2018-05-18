@@ -1929,14 +1929,7 @@ button.sidebar-button {
  * spinbutton *
  **************/
 spinbutton {
-    color: mix(@theme_text_color, @theme_base_color, 0.4);
-    padding: 2px 4px;
-    border-width: 0;
-    border-radius: 0;
-    border-style: none;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
+    padding: 0;
 }
 
 spinbutton:disabled {
