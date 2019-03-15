@@ -9,7 +9,7 @@ A GTK theme based on Windows 3.11 appearance
 
 **License :** GPL v3
 
-**More info :** http://b00merang.weebly.com/windows-81-metro.html
+**More info :** http://b00merang.weebly.com/windows-311.html
 
 ### Manual installation
 
