@@ -1125,8 +1125,8 @@ StScrollBar {
 
 #dash {
 	font-size: 20pt;
-	background: rgba(160,160,160,0.7);
-	border-image: url('assets/dash.png') 4 4 4 4;
+	border: none;
+	background: rgba(160,160,160,0.0);
 	box-shadow: 0;
 	padding: 0 0;
 }
@@ -1265,8 +1265,8 @@ StScrollBar {
 }
 /* Active App underline */
 .app-well-app-running-dot {
-	width: 6px;
-	height: 6px;
+	width: 0px;
+	height: 0px;
 	border-radius: 3px;
 	background-color: rgba(40,40,40,0.8);
 	margin-bottom: 0px;
