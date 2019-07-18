@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   -GtkScrollbar-has-backward-stepper: true;
   -GtkScrollbar-has-forward-stepper: true;
@@ -2194,34 +2193,35 @@ headerbar.selection-mode, toolbar.selection-mode {
     headerbar.selection-mode .selection-menu button .dim-label, toolbar.selection-mode .selection-menu button .dim-label {
       color: shade(#0000AA, 0.7); }
 
-window decoration {
+decoration {
   border-radius: 0px 0px 0 0;
   border-width: 0px;
   box-shadow: 0 3px 9px 1px alpha(#000000, 0.3), 0 0 0 1px alpha(#000000, 0.25), inset 0 0 0 3px #C0C0C0, inset 0 0 0 1px #000000;
   margin: 10px;
   background-color: #000000;
   padding: 4px; }
-  window decoration:backdrop {
+  decoration:backdrop {
     box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.25), inset 0 0 0 3px #C0C0C0, inset 0 0 0 1px #000000; }
-  .fullscreen window decoration, .tiled window decoration {
+  .fullscreen decoration, .tiled decoration {
     border-radius: 0; }
-
-.popup decoration  {
-  box-shadow: 0 0 0 1px #000000;
-  border-radius: 0px; }
-.ssd decoration  {
-  border-radius: 0px 0px 0 0;
-  box-shadow: 0 0 0 1px alpha(#000000, 0.1); }
-  .ssd decoration .maximized {
-    border-radius: 0; }
-tooltip.csd decoration  {
-  border-radius: 0px;
-  box-shadow: none; }
-.solid-csd decoration  {
-  margin: 1px;
-  border-radius: 0px;
-  background-color: alpha(white, 0.95);
-  box-shadow: none; }
+  .popup decoration {
+    padding: 0;
+    box-shadow: 0 0 0 1px #000000;
+    border-radius: 0px; }
+  .ssd decoration {
+    border-radius: 0px 0px 0 0;
+    box-shadow: 0 0 0 1px alpha(#000000, 0.1); }
+    .ssd decoration.maximized {
+      border-radius: 0; }
+  tooltip.csd decoration {
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 0; }
+  .solid-csd decoration {
+    margin: 1px;
+    border-radius: 0px;
+    background-color: alpha(white, 0.95);
+    box-shadow: none; }
 
 messagedialog {
   border-bottom-left-radius: 0px;
