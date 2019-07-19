@@ -90,7 +90,17 @@ style "menuitem"
 		image
 		{
 			function = ARROW
+			state = NORMAL
 			overlay_file = "/arrow/arrow-left.png"
+			overlay_border = {3,3,3,3}
+			overlay_stretch	= FALSE
+			arrow_direction	= LEFT
+		}
+		image
+		{
+			function = ARROW
+			state = PRELIGHT
+			overlay_file = "/arrow/arrow-left-hover.png"
 			overlay_border = {3,3,3,3}
 			overlay_stretch	= FALSE
 			arrow_direction	= LEFT
@@ -100,7 +110,17 @@ style "menuitem"
 		image
 		{
 			function = ARROW
+			state = NORMAL
 			overlay_file = "/arrow/arrow-right.png"
+			overlay_border = {3,3,3,3}
+			overlay_stretch	= FALSE
+			arrow_direction	= RIGHT
+		}
+		image
+		{
+			function = ARROW
+			state = PRELIGHT
+			overlay_file = "/arrow/arrow-right-hover.png"
 			overlay_border = {3,3,3,3}
 			overlay_stretch	= FALSE
 			arrow_direction	= RIGHT

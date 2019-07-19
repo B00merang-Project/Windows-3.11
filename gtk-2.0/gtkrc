@@ -24,6 +24,7 @@ style "default"
 {
         GtkToolbar::shadow_type = GTK_SHADOW_OUT
         GtkPaned::handle-size = 0
+        GtkComboBox::appears-as-list = 1
         GtkTreeView::odd_row_color = "#ffffff"
         GtkTreeView::even_row_color = "#ffffff"
         
