@@ -2673,10 +2673,12 @@ panel-toplevel.background na-tray-applet {
     #XfceNotifyWindow.osd button:disabled {
       color: #303030; }
 
-wnck-pager:hover {
-  background-color: #0000AA; }
-wnck-pager:selected {
-  background-color: #09098d; }
+wnck-pager {
+  background-color: #C0C0C0; }
+  wnck-pager:hover {
+    background-color: #0000AA; }
+  wnck-pager:selected {
+    background-color: #09098d; }
 
 .nemo-window .nemo-window-pane widget.entry {
   border: 1px solid;
