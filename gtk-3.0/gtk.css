@@ -731,7 +731,7 @@ menubar, .menubar {
   menubar:backdrop, .menubar:backdrop {
     color: #000000;
     border-bottom-color: #000000;
-    background-color: #C0C0C0; }
+    background-color: #FFFFFF; }
 
 menubar > menuitem, .menubar > menuitem {
   padding: 3px 5px;
@@ -1664,6 +1664,9 @@ toolbar {
         background-color: #a4a4a4; }
     .primary-toolbar button:disabled, .primary-toolbar .raised button:disabled {
       color: #303030; }
+
+#location-toolbar {
+  border-bottom: 1px solid #000000; }
 
 .inline-toolbar {
   padding: 1px;
