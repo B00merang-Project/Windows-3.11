@@ -10,6 +10,7 @@ A GTK theme based on Windows 3.11 appearance
 - Any GTK-based desktop
 - Cinnamon
 - Gnome
+- MATE
 - Xfce
 
 ### Manual installation
