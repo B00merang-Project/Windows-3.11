@@ -1321,14 +1321,18 @@ scale {
   min-height: 10px;
   min-width: 10px;
   padding: 12px; }
+  scale > fill,
   scale > trough {
     border: 1px solid #000000;
     border-radius: 0px;
     background-color: rgba(0, 0, 0, 0.1); }
+    scale > fill:disabled,
     scale > trough:disabled {
       background-color: rgba(0, 0, 0, 0.05); }
+      scale > fill:disabled:backdrop,
       scale > trough:disabled:backdrop {
         background-color: rgba(0, 0, 0, 0.05); }
+    scale > fill:backdrop,
     scale > trough:backdrop {
       background-color: rgba(0, 0, 0, 0.1); }
   scale > trough > highlight {
@@ -1342,78 +1346,86 @@ scale {
     scale > trough > highlight:backdrop {
       background-color: transparent; }
   scale > trough > slider {
-    min-width: 15px;
+    min-width: 21px;
     min-height: 21px;
     margin: -7px;
     border-radius: 0px;
     border: none;
     color: #FFFFFF;
     background-color: transparent;
-    background-position: center bottom;
+    background-position: center center;
     background-repeat: no-repeat;
     box-shadow: none; }
     scale > trough > slider:hover {
       color: #FFFFFF; }
     scale > trough > slider:backdrop {
       color: #FFFFFF; }
-    scale.horizontal > trough > slider,
-    scale.horizontal.marks-after:not(.marks-before) > trough > slider {
-      margin-bottom: -10px;
+  scale.horizontal > trough > slider {
+    margin-bottom: -10px;
+    background-image: url("assets/slider-horiz.png"); }
+    scale.horizontal > trough > slider:hover {
       background-image: url("assets/slider-horiz.png"); }
-      scale.horizontal > trough > slider:hover,
-      scale.horizontal.marks-after:not(.marks-before) > trough > slider:hover {
-        background-image: url("assets/slider-horiz.png"); }
-      scale.horizontal > trough > slider:disabled,
-      scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled {
+    scale.horizontal > trough > slider:disabled {
+      background-image: url("assets/slider-horiz-insensitive.png"); }
+      scale.horizontal > trough > slider:disabled:backdrop {
         background-image: url("assets/slider-horiz-insensitive.png"); }
-        scale.horizontal > trough > slider:disabled:backdrop,
-        scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled:backdrop {
-          background-image: url("assets/slider-horiz-insensitive.png"); }
-      scale.horizontal > trough > slider:backdrop,
-      scale.horizontal.marks-after:not(.marks-before) > trough > slider:backdrop {
+    scale.horizontal > trough > slider:backdrop {
+      background-image: url("assets/slider-horiz-insensitive.png"); }
+  scale.horizontal.marks-after:not(.marks-before) > trough > slider {
+    margin-bottom: -10px;
+    background-image: url("assets/slider-horiz.png"); }
+    scale.horizontal.marks-after:not(.marks-before) > trough > slider:hover {
+      background-image: url("assets/slider-horiz.png"); }
+    scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled {
+      background-image: url("assets/slider-horiz-insensitive.png"); }
+      scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled:backdrop {
         background-image: url("assets/slider-horiz-insensitive.png"); }
-    scale.horizontal.marks-before:not(.marks-after) > trough > slider {
-      margin-top: -10px;
+    scale.horizontal.marks-after:not(.marks-before) > trough > slider:backdrop {
+      background-image: url("assets/slider-horiz-insensitive.png"); }
+  scale.horizontal.color > trough > slider, scale.horizontal.marks-before:not(.marks-after) > trough > slider {
+    margin-top: -10px;
+    background-image: url("assets/slider-horiz-top.png"); }
+    scale.horizontal.color > trough > slider:hover, scale.horizontal.marks-before:not(.marks-after) > trough > slider:hover {
       background-image: url("assets/slider-horiz-top.png"); }
-      scale.horizontal.marks-before:not(.marks-after) > trough > slider:hover {
-        background-image: url("assets/slider-horiz-top.png"); }
-      scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled {
+    scale.horizontal.color > trough > slider:disabled, scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled {
+      background-image: url("assets/slider-horiz-top-insensitive.png"); }
+      scale.horizontal.color > trough > slider:disabled:backdrop, scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled:backdrop {
         background-image: url("assets/slider-horiz-top-insensitive.png"); }
-        scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled:backdrop {
-          background-image: url("assets/slider-horiz-top-insensitive.png"); }
-      scale.horizontal.marks-before:not(.marks-after) > trough > slider:backdrop {
-        background-image: url("assets/slider-horiz-top-insensitive.png"); }
-    scale.vertical > trough > slider {
-      min-width: 21px;
-      min-height: 15px;
-      background-position: right center; }
-    scale.vertical > trough > slider,
-    scale.vertical.marks-after:not(.marks-before) > trough > slider {
-      margin-right: -10px;
+    scale.horizontal.color > trough > slider:backdrop, scale.horizontal.marks-before:not(.marks-after) > trough > slider:backdrop {
+      background-image: url("assets/slider-horiz-top-insensitive.png"); }
+  scale.vertical > trough > slider {
+    margin-right: -10px;
+    background-image: url("assets/slider-vert.png"); }
+    scale.vertical > trough > slider:hover {
       background-image: url("assets/slider-vert.png"); }
-      scale.vertical > trough > slider:hover,
-      scale.vertical.marks-after:not(.marks-before) > trough > slider:hover {
-        background-image: url("assets/slider-vert.png"); }
-      scale.vertical > trough > slider:disabled,
-      scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled {
+    scale.vertical > trough > slider:disabled {
+      background-image: url("assets/slider-vert-insensitive.png"); }
+      scale.vertical > trough > slider:disabled:backdrop {
         background-image: url("assets/slider-vert-insensitive.png"); }
-        scale.vertical > trough > slider:disabled:backdrop,
-        scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled:backdrop {
-          background-image: url("assets/slider-vert-insensitive.png"); }
-      scale.vertical > trough > slider:backdrop,
-      scale.vertical.marks-after:not(.marks-before) > trough > slider:backdrop {
+    scale.vertical > trough > slider:backdrop {
+      background-image: url("assets/slider-vert-insensitive.png"); }
+  scale.vertical.color:dir(ltr) > trough > slider, scale.vertical.marks-after:not(.marks-before) > trough > slider {
+    margin-right: -10px;
+    background-image: url("assets/slider-vert.png"); }
+    scale.vertical.color:dir(ltr) > trough > slider:hover, scale.vertical.marks-after:not(.marks-before) > trough > slider:hover {
+      background-image: url("assets/slider-vert.png"); }
+    scale.vertical.color:dir(ltr) > trough > slider:disabled, scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled {
+      background-image: url("assets/slider-vert-insensitive.png"); }
+      scale.vertical.color:dir(ltr) > trough > slider:disabled:backdrop, scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled:backdrop {
         background-image: url("assets/slider-vert-insensitive.png"); }
-    scale.vertical.marks-before:not(.marks-after) > trough > slider {
-      margin-left: -10px;
+    scale.vertical.color:dir(ltr) > trough > slider:backdrop, scale.vertical.marks-after:not(.marks-before) > trough > slider:backdrop {
+      background-image: url("assets/slider-vert-insensitive.png"); }
+  scale.vertical.color:dir(rtl) > trough > slider, scale.vertical.marks-before:not(.marks-after) > trough > slider {
+    margin-left: -10px;
+    background-image: url("assets/slider-vert-left.png"); }
+    scale.vertical.color:dir(rtl) > trough > slider:hover, scale.vertical.marks-before:not(.marks-after) > trough > slider:hover {
       background-image: url("assets/slider-vert-left.png"); }
-      scale.vertical.marks-before:not(.marks-after) > trough > slider:hover {
-        background-image: url("assets/slider-vert-left.png"); }
-      scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled {
+    scale.vertical.color:dir(rtl) > trough > slider:disabled, scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled {
+      background-image: url("assets/slider-vert-left-insensitive.png"); }
+      scale.vertical.color:dir(rtl) > trough > slider:disabled:backdrop, scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled:backdrop {
         background-image: url("assets/slider-vert-left-insensitive.png"); }
-        scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled:backdrop {
-          background-image: url("assets/slider-vert-left-insensitive.png"); }
-      scale.vertical.marks-before:not(.marks-after) > trough > slider:backdrop {
-        background-image: url("assets/slider-vert-left-insensitive.png"); }
+    scale.vertical.color:dir(rtl) > trough > slider:backdrop, scale.vertical.marks-before:not(.marks-after) > trough > slider:backdrop {
+      background-image: url("assets/slider-vert-left-insensitive.png"); }
   scale.fine-tune.horizontal {
     padding-top: 9px;
     padding-bottom: 9px;
@@ -1722,34 +1734,40 @@ calendar {
   border-style: solid;
   border-color: #000000;
   color: #000000; }
-  calendar.header {
+  calendar > header {
     border: none;
     border-bottom: 1px solid black;
     color: #000000; }
-  calendar.button {
-    color: rgba(0, 0, 0, 0.45); }
-    calendar.button:hover {
-      color: #000000; }
-    calendar.button:backdrop {
-      color: rgba(0, 0, 0, 0.45); }
-    calendar.button:disabled {
-      color: rgba(96, 96, 96, 0.45); }
-  calendar:selected {
-    border-radius: 3px;
-    color: #FFFFFF;
-    background-color: #0000AA; }
-    calendar:selected:backdrop {
+    calendar > header > button {
+      border: none;
+      box-shadow: none;
+      background: none;
+      border-radius: 0; }
+      calendar > header > button:hover {
+        color: #000000; }
+      calendar > header > button:backdrop {
+        color: #000000; }
+      calendar > header > button:disabled {
+        color: #606060; }
+  calendar > grid > label.today {
+    box-shadow: inset 0px -2px #000000; }
+    calendar > grid > label.today:selected {
+      box-shadow: none; }
+  calendar > grid > label:focus {
+    outline-color: #000000;
+    outline-offset: -2px;
+    outline-width: 2px;
+    outline-style: solid; }
+  calendar > grid > label.day-number {
+    padding: 3px; }
+    calendar > grid > label.day-number:selected {
       color: #FFFFFF;
-      background-color: #0000AA; }
-  calendar:indeterminate {
-    color: alpha(currentColor, 0.1); }
-  calendar.highlight {
-    color: #606060; }
-    calendar.highlight:backdrop {
-      color: #606060; }
-  calendar:backdrop {
-    color: #000000;
-    border-color: #000000; }
+      background-color: #0000AA;
+      border-radius: 0px; }
+    calendar > grid > label.day-number:checked {
+      background-color: rgba(0, 0, 170, 0.3); }
+  calendar > grid > label.day-number.other-month {
+    color: alpha(currentColor, 0.3); }
 
 window.dialog.message {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
