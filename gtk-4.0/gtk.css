@@ -446,7 +446,7 @@ editablelabel > stack > text > selection {
 button {
   padding: 4px 8px;
   border-radius: 2px;
-  border-style: 1px solid #000000;
+  border: 1px solid #000000;
   color: #000000;
   background-color: #C0C0C0;
   background-image: none;
@@ -1226,11 +1226,10 @@ treeview ~ scrollbar.vertical {
   margin-top: -1px; }
 
 switch {
-  outline-offset: -4px;
   margin: 0px;
-  color: #000000;
-  border: none;
   border-radius: 2px;
+  border: none;
+  color: #000000;
   background-color: #C0C0C0;
   box-shadow: inset 1px 0 #7d7d7d, inset 0 1px #7d7d7d, inset -1px 0 white, inset 0 -1px white; }
   switch:checked {
@@ -1240,14 +1239,17 @@ switch {
     color: #606060;
     border-color: #b6b6b6;
     background-color: #b6b6b6; }
-  switch slider {
-    margin: 0;
-    border: 1px solid #000000;
+  switch > slider {
+    margin: 0px;
+    min-width: 40px;
+    min-height: 24px;
     border-radius: 2px;
+    border: 1px solid #000000;
     color: #000000;
-    box-shadow: inset -2px 0 #7d7d7d, inset 0 -2px #7d7d7d, inset 1px 0 white, inset 0 1px white;
-    background-color: #C0C0C0; }
-  switch:disabled slider {
+    background-color: #C0C0C0;
+    background-image: none;
+    box-shadow: inset -2px 0 #7d7d7d, inset 0 -2px #7d7d7d, inset 1px 0 white, inset 0 1px white; }
+  switch:disabled > slider {
     background-color: #b6b6b6; }
 
 checkbutton.text-button, radiobutton.text-button {
