@@ -1511,12 +1511,12 @@ progressbar {
   font-size: smaller;
   color: gray; }
   progressbar > trough {
-    border: 1px solid #000000;
     border-radius: 0px;
+    border: 1px solid #000000;
     background-color: #FFFFFF; }
   progressbar > trough > progress {
-    border: none;
     border-radius: 0px;
+    border: none;
     background-color: #0000AA; }
   progressbar.horizontal > trough {
     min-width: 150px; }
