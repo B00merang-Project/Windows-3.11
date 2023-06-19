@@ -476,6 +476,7 @@ editablelabel > stack > text > selection {
     color: #000000;
     background-color: #0000AA; }
 
+
 button {
   padding: 4px 8px;
   border-radius: 2px;
@@ -483,81 +484,166 @@ button {
   color: #000000;
   background-color: #C0C0C0;
   background-image: none;
-  box-shadow: inset -2px 0 #7d7d7d, inset 0 -2px #7d7d7d, inset 1px 0 white, inset 0 1px white; }
+  text-shadow: none;
+  box-shadow: inset -2px -2px #7d7d7d, inset 1px 1px white;
+  -gtk-icon-shadow: none; }
+  
   button:focus {
-    box-shadow: inset -3px 0 #7d7d7d, inset 0 -3px #7d7d7d, inset 2px 0 white, inset 0 2px white, inset 0 0 0 1px black; }
+    box-shadow: inset -3px -3px #7d7d7d, inset 2px 2px white, inset 0 0 0 1px black; }
+  
+  button:hover {
+    border-color: #000000;
+    color: #000000;
+    background-color: #C0C0C0;
+    box-shadow: inset -2px -2px #7d7d7d, inset 1px 1px white; }
+  
   button:active {
     color: #000000;
     border-color: #000000;
     background-color: #C0C0C0;
     background-image: none;
-    box-shadow: inset 2px 0 #7d7d7d, inset 0 2px #7d7d7d, inset -1px 0 white, inset 0 -1px white; }
+    box-shadow: inset 2px 2px #7d7d7d, inset -1px -1px white; }
+  
   button:checked {
     color: #000000;
     border-color: #000000;
-    box-shadow: none;
     background-color: #C0C0C0;
     background-image: linear-gradient(to bottom left, white 33%, #C0C0C0 34%, #C0C0C0 66%, white 67%);
-    background-size: 3px 3px, auto; }
+    background-size: 3px 3px, auto;
+    box-shadow: none; }
+    
     button:checked:focus {
       box-shadow: inset 0 0 0 1px black; }
-    button:checked:disabled {
-      color: #0a0a0a;
-      border-color: #9b9b9b;
-      background-color: #a4a4a4; }
+  
+  button:checked:disabled {
+    color: #606060;
+    border-color: #9b9b9b;
+    background-color: #a4a4a4; }
+  
   button:disabled {
-    color: #303030; }
-  button.flat {
+    color: #606060; }
+
+headerbar button, toolbar button,
+.toolbar button,
+button.flat {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  text-shadow: none;
+  box-shadow: none;
+  -gtk-icon-shadow: none; }
+  headerbar button:backdrop, toolbar button:backdrop,
+  .toolbar button:backdrop, headerbar button:disabled, toolbar button:disabled,
+  .toolbar button:disabled,
+  button.flat:backdrop,
+  button.flat:disabled,
+  button.flat:disabled:backdrop {
     border-color: transparent;
-    border-radius: 2px;
-    color: #000000;
-    box-shadow: none;
     background-color: transparent;
     background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+    -gtk-icon-shadow: none; }
+  headerbar button:hover, toolbar button:hover,
+  .toolbar button:hover,
+  button.flat:hover {
+    border-color: #000000;
+    color: #000000;
+    background-color: #C0C0C0;
+    box-shadow: inset -2px -2px #7d7d7d, inset 1px 1px white; }
+  headerbar button:active, toolbar button:active,
+  .toolbar button:active,
+  button.flat:active {
+    color: #000000;
+    border-color: #000000;
+    background-color: #C0C0C0;
+    background-image: none;
+    box-shadow: inset 2px 2px #7d7d7d, inset -1px -1px white; }
+  headerbar button:checked, toolbar button:checked,
+  .toolbar button:checked,
+  button.flat:checked {
+    color: #000000;
+    border-color: #000000;
+    background-color: #C0C0C0;
+    background-image: linear-gradient(to bottom left, white 33%, #C0C0C0 34%, #C0C0C0 66%, white 67%);
+    background-size: 3px 3px, auto;
     box-shadow: none; }
-    button.flat:hover {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      box-shadow: inset -2px 0 #7d7d7d, inset 0 -2px #7d7d7d, inset 1px 0 white, inset 0 1px white; }
-    button.flat:active {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      background-image: none;
-      box-shadow: inset 2px 0 #7d7d7d, inset 0 2px #7d7d7d, inset -1px 0 white, inset 0 -1px white; }
-    button.flat:checked {
-      color: #000000;
-      border-color: #000000;
-      box-shadow: none;
-      background-color: #C0C0C0;
-      background-image: linear-gradient(to bottom left, white 33%, #C0C0C0 34%, #C0C0C0 66%, white 67%);
-      background-size: 3px 3px, auto; }
-    button.flat:disabled {
-      border-color: transparent;
-      color: rgba(0, 0, 0, 0.8);
-      background-color: transparent; }
+    headerbar button:checked:focus, toolbar button:checked:focus,
+    .toolbar button:checked:focus,
+    button.flat:checked:focus {
+      box-shadow: inset 0 0 0 1px black; }
+  headerbar button:checked:disabled, toolbar button:checked:disabled,
+  .toolbar button:checked:disabled,
+  button.flat:checked:disabled {
+    color: #606060;
+    border-color: #9b9b9b;
+    background-color: #a4a4a4; }
 
 button.destructive-action {
+  padding: 4px 8px;
   border-radius: 2px;
-  border: 1px solid #a30000;
-  color: #fae6e6;
-  background-color: #CC0000; }
+  border: 1px solid #000000;
+  color: #FFFFFF;
+  background-color: #CC0000;
+  background-image: none;
+  text-shadow: none;
+  box-shadow: inset -2px -2px #6d1717, inset 1px 1px white;
+  -gtk-icon-shadow: none; }
+  button.destructive-action:focus {
+    box-shadow: inset -3px -3px #6d1717, inset 2px 2px white, inset 0 0 0 1px black; }
   button.destructive-action:hover {
-    border-color: #8f0000;
-    background-color: #d63333; }
+    border-color: #000000;
+    color: #FFFFFF;
+    background-color: #CC0000;
+    box-shadow: inset -2px -2px #6d1717, inset 1px 1px white; }
   button.destructive-action:active {
-    border-color: #8f0000;
-    background-color: #b80000; }
-  button.destructive-action:backdrop {
-    border-color: #a30000;
-    color: #fae6e6;
-    background-color: #c83a3a; }
+    color: #FFFFFF;
+    border-color: #000000;
+    background-color: #CC0000;
+    background-image: none;
+    box-shadow: inset 2px 2px #6d1717, inset -1px -1px white; }
+  button.destructive-action:checked {
+    color: #FFFFFF;
+    border-color: #000000;
+    background-color: #CC0000;
+    background-image: linear-gradient(to bottom left, #ff3333 33%, #CC0000 34%, #CC0000 66%, #ff3333 67%);
+    background-size: 3px 3px, auto;
+    box-shadow: none; }
+    button.destructive-action:checked:focus {
+      box-shadow: inset 0 0 0 1px black; }
 
 button.suggested-action {
-  box-shadow: 0 0 0 1px #000000, inset -2px 0 #7d7d7d, inset 0 -2px #7d7d7d, inset 1px 0 white, inset 0 1px white; }
+  padding: 4px 8px;
+  border-radius: 2px;
+  border: 1px solid #000000;
+  color: #FFFFFF;
+  background-color: #0000AA;
+  background-image: none;
+  text-shadow: none;
+  box-shadow: inset -2px -2px #13135b, inset 1px 1px white;
+  -gtk-icon-shadow: none; }
+  button.suggested-action:focus {
+    box-shadow: inset -3px -3px #13135b, inset 2px 2px white, inset 0 0 0 1px black; }
+  button.suggested-action:hover {
+    border-color: #000000;
+    color: #FFFFFF;
+    background-color: #0000AA;
+    box-shadow: inset -2px -2px #13135b, inset 1px 1px white; }
   button.suggested-action:active {
-    box-shadow: 0 0 0 1px #000000, inset 2px 0 #7d7d7d, inset 0 2px #7d7d7d, inset -1px 0 white, inset 0 -1px white; }
+    color: #FFFFFF;
+    border-color: #000000;
+    background-color: #0000AA;
+    background-image: none;
+    box-shadow: inset 2px 2px #13135b, inset -1px -1px white; }
+  button.suggested-action:checked {
+    color: #FFFFFF;
+    border-color: #000000;
+    background-color: #0000AA;
+    background-image: linear-gradient(to bottom left, blue 33%, #0000AA 34%, #0000AA 66%, blue 67%);
+    background-size: 3px 3px, auto;
+    box-shadow: none; }
+    button.suggested-action:checked:focus {
+      box-shadow: inset 0 0 0 1px black; }
 
 button.link,
 link {
@@ -594,68 +680,98 @@ button.link, button.link:hover, button.link:active, button.link:checked {
 button.link > label {
   text-decoration: underline; }
 
-spinbutton.horizontal {
-  border: 1px solid #000000; }
-  spinbutton.horizontal:backdrop {
-    border-color: #000000; }
-  spinbutton.horizontal entry {
-    border: none;
-    padding: 7px 15px; }
-  spinbutton.horizontal button {
-    border-width: 0;
-    border-radius: 0;
-    border-left-width: 1px; }
-    spinbutton.horizontal button:focus {
-      box-shadow: none; }
+spinbutton:not(.vertical) {
+  padding: 5px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: #FFFFFF;
+  min-height: 28px;
+  padding: 0px; }
+  spinbutton:not(.vertical):focus {
+    border-color: #0000AA; }
+  spinbutton:not(.vertical) > text {
+    min-height: 0px;
+    padding: 3px;
+    border-radius: 0px;
+    background-image: none;
+    border-color: transparent;
+    padding: 7px;
+    min-width: 36px; }
+    spinbutton:not(.vertical) > text > selection {
+      background-color: #0000AA;
+      color: #FFFFFF; }
+      spinbutton:not(.vertical) > text > selection:focus-within {
+        background-color: #0000AA;
+        color: #FFFFFF; }
+  spinbutton:not(.vertical) > button {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+    -gtk-icon-shadow: none;
+    padding: 4px 6px;
+    border-radius: 0px;
+    box-shadow: -1px 0 #000000; }
+    spinbutton:not(.vertical) > button.up {
+      border-radius: 0 0px 0px 0; }
+    spinbutton:not(.vertical) > button:hover {
+      background-color: rgba(0, 0, 0, 0.1); }
+  spinbutton:not(.vertical):disabled {
+    color: #606060; }
+    spinbutton:not(.vertical):disabled:backdrop {
+      border-color: #000000;
+      color: #606060;
+      background-color: #b6b6b6; }
+  spinbutton:not(.vertical):backdrop {
+    color: #000000;
+    background-color: #FFFFFF; }
 
-spinbutton.vertical button.up {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-width: 0; }
+spinbutton.vertical > text {
+  padding: 5px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: #FFFFFF;
+  min-height: 32px;
+  min-width: 32px;
+  padding: 0;
+  border-radius: 0; }
+  spinbutton.vertical > text > selection {
+    background-color: #0000AA;
+    color: #FFFFFF; }
+    spinbutton.vertical > text > selection:focus-within {
+      background-color: #0000AA;
+      color: #FFFFFF; }
 
-spinbutton.vertical button.down {
-  border-top-width: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0; }
+spinbutton.vertical > button {
+  min-height: 32px;
+  min-width: 32px;
+  padding: 0; }
+  spinbutton.vertical > button.up {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-width: 0; }
+  spinbutton.vertical > button.down {
+    border-top-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
 
-toolbar {
+spinbutton.vertical:drop(active) {
+  border-color: transparent;
+  box-shadow: none; }
+
+toolbar,
+.toolbar {
   padding: 4px;
   border: none;
   color: #000000;
   background-color: #C0C0C0; }
-  toolbar:backdrop {
+  toolbar:backdrop,
+  .toolbar:backdrop {
     color: #000000;
     background-color: #C0C0C0; }
-  toolbar button.flat {
-    border-color: transparent;
-    border-radius: 2px;
-    color: #000000;
-    box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none; }
-    toolbar button.flat:hover {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      box-shadow: inset -2px 0 #7d7d7d, inset 0 -2px #7d7d7d, inset 1px 0 white, inset 0 1px white; }
-    toolbar button.flat:active {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      background-image: none;
-      box-shadow: inset 2px 0 #7d7d7d, inset 0 2px #7d7d7d, inset -1px 0 white, inset 0 -1px white; }
-    toolbar button.flat:checked {
-      color: #000000;
-      border-color: #000000;
-      box-shadow: none;
-      background-color: #C0C0C0;
-      background-image: linear-gradient(to bottom left, white 33%, #C0C0C0 34%, #C0C0C0 66%, white 67%);
-      background-size: 3px 3px, auto; }
-    toolbar button.flat:disabled {
-      border-color: transparent;
-      color: rgba(0, 0, 0, 0.8);
-      background-color: transparent; }
 
 searchbar {
   border-width: 0 0 1px 0;
@@ -772,35 +888,7 @@ headerbar {
     headerbar .subtitle:backdrop {
       color: rgba(0, 0, 0, 0.7); }
   headerbar button {
-    border-color: transparent;
-    border-radius: 2px;
-    color: #000000;
-    box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none; }
-    headerbar button:hover {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      box-shadow: inset -2px 0 #7d7d7d, inset 0 -2px #7d7d7d, inset 1px 0 white, inset 0 1px white; }
-    headerbar button:active {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      background-image: none;
-      box-shadow: inset 2px 0 #7d7d7d, inset 0 2px #7d7d7d, inset -1px 0 white, inset 0 -1px white; }
-    headerbar button:checked {
-      color: #000000;
-      border-color: #000000;
-      box-shadow: none;
-      background-color: #C0C0C0;
-      background-image: linear-gradient(to bottom left, white 33%, #C0C0C0 34%, #C0C0C0 66%, white 67%);
-      background-size: 3px 3px, auto; }
-    headerbar button:disabled {
-      border-color: transparent;
-      color: rgba(0, 0, 0, 0.8);
-      background-color: transparent; }
+    color: #FFFFFF; }
   headerbar:backdrop {
     border-bottom-color: #000000;
     color: #000000;
@@ -833,7 +921,17 @@ headerbar {
       background-position: center;
       background-repeat: no-repeat;
       -gtk-icon-shadow: none;
+      border-color: #000000;
+      color: #000000;
+      background-color: #C0C0C0;
+      box-shadow: inset -2px -2px #7d7d7d, inset 1px 1px white;
       background-image: url("assets/close.svg"); }
+      headerbar windowcontrols button.close:active {
+        color: #000000;
+        border-color: #000000;
+        background-color: #C0C0C0;
+        background-image: none;
+        box-shadow: inset 2px 2px #7d7d7d, inset -1px -1px white; }
     headerbar windowcontrols button.maximize {
       padding: 2px 2px;
       min-width: 16px;
@@ -843,7 +941,17 @@ headerbar {
       background-position: center;
       background-repeat: no-repeat;
       -gtk-icon-shadow: none;
+      border-color: #000000;
+      color: #000000;
+      background-color: #C0C0C0;
+      box-shadow: inset -2px -2px #7d7d7d, inset 1px 1px white;
       background-image: url("assets/maximize.svg"); }
+      headerbar windowcontrols button.maximize:active {
+        color: #000000;
+        border-color: #000000;
+        background-color: #C0C0C0;
+        background-image: none;
+        box-shadow: inset 2px 2px #7d7d7d, inset -1px -1px white; }
     headerbar windowcontrols button.minimize {
       padding: 2px 2px;
       min-width: 16px;
@@ -853,7 +961,17 @@ headerbar {
       background-position: center;
       background-repeat: no-repeat;
       -gtk-icon-shadow: none;
+      border-color: #000000;
+      color: #000000;
+      background-color: #C0C0C0;
+      box-shadow: inset -2px -2px #7d7d7d, inset 1px 1px white;
       background-image: url("assets/minimize.svg"); }
+      headerbar windowcontrols button.minimize:active {
+        color: #000000;
+        border-color: #000000;
+        background-color: #C0C0C0;
+        background-image: none;
+        box-shadow: inset 2px 2px #7d7d7d, inset -1px -1px white; }
     .maximized headerbar windowcontrols button.maximize {
       padding: 2px 2px;
       min-width: 16px;
@@ -863,7 +981,17 @@ headerbar {
       background-position: center;
       background-repeat: no-repeat;
       -gtk-icon-shadow: none;
+      border-color: #000000;
+      color: #000000;
+      background-color: #C0C0C0;
+      box-shadow: inset -2px -2px #7d7d7d, inset 1px 1px white;
       background-image: url("assets/restore.svg"); }
+      .maximized headerbar windowcontrols button.maximize:active {
+        color: #000000;
+        border-color: #000000;
+        background-color: #C0C0C0;
+        background-image: none;
+        box-shadow: inset 2px 2px #7d7d7d, inset -1px -1px white; }
 
 pathbar > button.text-button, pathbar > button.image-button, pathbar > button {
   padding-left: 4px;
@@ -1875,7 +2003,8 @@ calendar {
       calendar > header > button:hover {
         color: #000000; }
       calendar > header > button:backdrop {
-        color: #000000; }
+        color: #000000;
+        background: none; }
       calendar > header > button:disabled {
         color: #606060; }
   calendar > grid > label.today {
@@ -1978,6 +2107,10 @@ paned > separator {
   background-size: 1px 1px; }
   paned > separator:selected {
     background-image: image(#0000AA); }
+  paned > separator:backdrop {
+    background-color: transparent;
+    background-image: image(#000000);
+    background-size: 1px 1px; }
   paned > separator.wide {
     min-width: 5px;
     min-height: 5px;
@@ -2514,78 +2647,21 @@ statusbar {
   .linked.vertical spinbutton button:first-child, .linked.vertical spinbutton button:last-child, .primary-toolbar .linked.vertical spinbutton button:first-child, .primary-toolbar .linked.vertical spinbutton button:last-child {
     border-radius: 0; }
 
-.toolbar > button,
-.toolbar > :not(.linked) > button,
-.toolbar :not(.linked) > menubutton > button,
-.toolbar :not(.linked) > scalebutton > button,
-.toolbar :not(.linked) > dropdown > button,
-.toolbar :not(.linked) > colorbutton > button,
-.toolbar :not(.linked) > fontbutton > button,
-.toolbar :not(.linked) > appchooserbutton > button,
-.toolbar :not(.linked) > combobox > box > button {
-  margin: 1px;
-  border-color: transparent;
-  border-radius: 2px;
-  color: #000000;
-  box-shadow: none;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none; }
-  .toolbar > button:hover,
-  .toolbar > :not(.linked) > button:hover,
-  .toolbar :not(.linked) > menubutton > button:hover,
-  .toolbar :not(.linked) > scalebutton > button:hover,
-  .toolbar :not(.linked) > dropdown > button:hover,
-  .toolbar :not(.linked) > colorbutton > button:hover,
-  .toolbar :not(.linked) > fontbutton > button:hover,
-  .toolbar :not(.linked) > appchooserbutton > button:hover,
-  .toolbar :not(.linked) > combobox > box > button:hover {
-    color: #000000;
-    border-color: #000000;
-    background-color: #C0C0C0;
-    box-shadow: inset -2px 0 #7d7d7d, inset 0 -2px #7d7d7d, inset 1px 0 white, inset 0 1px white; }
-  .toolbar > button:active,
-  .toolbar > :not(.linked) > button:active,
-  .toolbar :not(.linked) > menubutton > button:active,
-  .toolbar :not(.linked) > scalebutton > button:active,
-  .toolbar :not(.linked) > dropdown > button:active,
-  .toolbar :not(.linked) > colorbutton > button:active,
-  .toolbar :not(.linked) > fontbutton > button:active,
-  .toolbar :not(.linked) > appchooserbutton > button:active,
-  .toolbar :not(.linked) > combobox > box > button:active {
-    color: #000000;
-    border-color: #000000;
-    background-color: #C0C0C0;
-    background-image: none;
-    box-shadow: inset 2px 0 #7d7d7d, inset 0 2px #7d7d7d, inset -1px 0 white, inset 0 -1px white; }
-  .toolbar > button:checked,
-  .toolbar > :not(.linked) > button:checked,
-  .toolbar :not(.linked) > menubutton > button:checked,
-  .toolbar :not(.linked) > scalebutton > button:checked,
-  .toolbar :not(.linked) > dropdown > button:checked,
-  .toolbar :not(.linked) > colorbutton > button:checked,
-  .toolbar :not(.linked) > fontbutton > button:checked,
-  .toolbar :not(.linked) > appchooserbutton > button:checked,
-  .toolbar :not(.linked) > combobox > box > button:checked {
-    color: #000000;
-    border-color: #000000;
-    box-shadow: none;
-    background-color: #C0C0C0;
-    background-image: linear-gradient(to bottom left, white 33%, #C0C0C0 34%, #C0C0C0 66%, white 67%);
-    background-size: 3px 3px, auto; }
-  .toolbar > button:disabled,
-  .toolbar > :not(.linked) > button:disabled,
-  .toolbar :not(.linked) > menubutton > button:disabled,
-  .toolbar :not(.linked) > scalebutton > button:disabled,
-  .toolbar :not(.linked) > dropdown > button:disabled,
-  .toolbar :not(.linked) > colorbutton > button:disabled,
-  .toolbar :not(.linked) > fontbutton > button:disabled,
-  .toolbar :not(.linked) > appchooserbutton > button:disabled,
-  .toolbar :not(.linked) > combobox > box > button:disabled {
-    border-color: transparent;
-    color: rgba(0, 0, 0, 0.8);
-    background-color: transparent; }
-
+/*
+  .toolbar > button,
+  .toolbar > :not(.linked) > button,
+  .toolbar :not(.linked) > menubutton > button,
+  .toolbar :not(.linked) > scalebutton > button,
+  .toolbar :not(.linked) > dropdown > button,
+  .toolbar :not(.linked) > colorbutton > button,
+  .toolbar :not(.linked) > fontbutton > button,
+  .toolbar :not(.linked) > appchooserbutton > button,
+  .toolbar :not(.linked) > combobox > box > button {
+    margin: 1px;
+    
+    @include flat_buttons();
+  }
+  */
 /* GTK NAMED COLORS - use responsibly! */
 /* widget text/foreground color */
 @define-color theme_fg_color #000000;
